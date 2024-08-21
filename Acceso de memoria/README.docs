@@ -1,2 +1,7 @@
-**Uso de memoria dinamica
+  # Uso de memoria dinamica
+
+-mAlloc()
+-cAlloc()
+-reAlloc()
+
 
