@@ -4,6 +4,8 @@
 
 -cAlloc()
 
+-Parcial primer corte completamente funcional
+
 -reAlloc()
 
 
