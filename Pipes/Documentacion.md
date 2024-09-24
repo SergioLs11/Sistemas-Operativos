@@ -10,11 +10,13 @@ En este caso, el servidor va a ser el encaragado de recibir los mensajes enviado
 1. FIFO_FILE: Buscará y usará el archivo de este tipo creado anteriormente con el nombre "MIFIFO".
 2. S_IFIFO: Es un indicador que el archivo efectivamente es tipo FIFO, permitiendo la comunicación entre procesos.
 3. 0640: Representa los permisos que van a tener por parte del propietario y el grupo que haga parte de este:
-   1. El propietarios tiene permisos de lectura y escritura(6).
+   1. El propietarios tiene permisos de lectura y escritura (6).
    2. El grupo al que pertenece el archivo tiene permisos de lectura (4).
    3. Otros usuarios no van a tener acceso (0).
 4. El tercer parametro (0) se usa cuando se crean dispositivos, como estamos usando PIPES esto se ignora.
 
  Al ya tener creada este nodo se necesita abrir el archivo tipo FIFO, este se abre modo lectura con la bandera *O_RDONLY* y marcando el final de la comunicación con el código *strcpy(final, "fin")*, en el cual cuando se recibe el texto "fin" se cerrará el archivo.
 
+### Cliente
+En cuanto al lado del cliente, se configurarán algunos parametros similares, como lo pueden ser el cierre del archivo con la pablabra clave "fin" o la creación del archivo tipo FIFO. Pasando a la apertura del archivo, cambia la segunda bandera, ya que esta se declara como *O_CREAT|O_WRONLY* especificando que si el archivo no existe debe ser creado, y además se abrirá en modo escritura para enviar los mensajes al servidor. Por último escribirá el mensaje a enviar en el archivo con la función *write* e imprimiendo en la pantalla el mensaje que se envió y su tamaño. 
  
