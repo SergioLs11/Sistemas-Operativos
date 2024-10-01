@@ -6,6 +6,7 @@ Materia: Sistemas Operativos
 Tema: pipes bidireccionales
 Se creará un sistema cleinte servidor, en el cual se va a poder realizar una comunicación bidireccional entre el cliente y el servidor. sentido CLIENTE-SERVIDOR
 ***************************************/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
@@ -14,6 +15,7 @@ Se creará un sistema cleinte servidor, en el cual se va a poder realizar una co
 #include <unistd.h>
 #include <string.h>
 
+// Se crea el archivo para el named FIFO
 #define FIFO_FILE "/tmp/fifo_twoway"
  int main() {
    int fd;
@@ -23,10 +25,12 @@ Se creará un sistema cleinte servidor, en el cual se va a poder realizar una co
    char contenedor[80]; 
    char fin[5]; 
 
-   printf("FIFO_CLIENT: Send messages, infinitely, to end enter \"end\"\n");
-   fd = open(FIFO_FILE, O_CREAT|O_RDWR, 0666);
+  // inicio del servicio de parte del cliente
+   printf("CLIENTE_FIFO: Sen enviarán mensajes indefinidamente, para finalizar ingrese \"fin\"\n");
+   fd = open(FIFO_FILE, O_CREAT|O_RDWR, 0666); 
    strcpy(fin, "fin");
- 
+
+//Se inicia el ciclo de envío del mensaje g¿hacia el servidor
    while (1) {
      printf("Ingrese el mensaje: ");
      fgets(contenedor, sizeof(contenedor), stdin);
