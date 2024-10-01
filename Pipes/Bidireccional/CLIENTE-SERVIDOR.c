@@ -38,7 +38,6 @@ Se creará un sistema cleinte servidor, en el cual se va a poder realizar una co
      contenedor[tamañostring - 1] = '\0';
      finproceso = strcmp(contenedor, fin);
  
-      //printf("end_process is %d\n", end_process);
   if (finproceso != 0) {
      write(fd, contenedor, strlen(contenedor));
      printf("FIFOCLIENTE: Mensaje enviado: \"%s\" y su tamaño es %d\n", contenedor, (int)strlen(contenedor));
