@@ -43,11 +43,7 @@ int main() {
       de_cabeza(contenedor);
       printf("FIFOSERVIDOR: Enviando el mensaje de cabeza: \"%s\" con longitud de %d\n", contenedor, (int) strlen(contenedor));
       write(fd, contenedor, strlen(contenedor));
-      /*
-      sleep - This is to make sure other process reads this, otherwise this
-      process would retrieve the message
-      */
-      sleep(2);
+      sleep(2); // se usa para generar un retraso automatico
      }
    return 0;
  }
