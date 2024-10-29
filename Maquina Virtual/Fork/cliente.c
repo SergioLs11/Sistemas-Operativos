@@ -1,8 +1,8 @@
 /***************************************
-Pontificia Universidad Javeriana                                                                                                                            Autor: Sergio Andrés López Sánchez
-Fecha: 24/09/2024                                                                                                                                           Materia: Sistemas Operativos
+Pontificia Universidad Javeriana      Autor: Sergio Andrés López Sánchez
+Fecha: 24/09/2024                     Materia: Sistemas Operativos
 Tema: pipes bidireccionales
-Se creará un sistema cleinte servidor, en el cual se va a poder realizar una comunicación bidireccional entre el cliente y el servidor. sentido CLIENTE-SER>
+Se creará un sistema cleinte servidor, en el cual se va a poder realizar una comunicación bidireccional entre el cliente y el servidor. sentido CLIENTE-SERVIDOR
 ***************************************/
 
 #include <stdio.h>
