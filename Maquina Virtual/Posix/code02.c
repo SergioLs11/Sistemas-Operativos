@@ -1,3 +1,14 @@
+/**********************************************************************
+Pontificia Universidad Javeriana
+Autor: Sergio Andrés López Sánchez
+Fecha: 29/10/2024
+Materia: Sistemas Operativos
+Tema: Sistema productor/consumidor usando hilos
+El código presentado a continuación es una demostración del uso de hilos usando cordinación de acceso a recursos compartidos (representado con la variable Counter) y configurando el número máximo de hilos con la variable MAX.
+counter_mutex: protege el acceso a la variable counter para evitar condiciones de carrera.
+condp_mutex y condc_mutex: se usan para sincronizar las operaciones de espera y señalización de los hilos.
+condVarProd y condVarCons: son variables de condición usadas para notificar a los productores y consumidores cuando counter alcanza ciertos límites (máximo o mínimo).
+**********************************************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
