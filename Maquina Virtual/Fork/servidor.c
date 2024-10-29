@@ -4,7 +4,7 @@ Autor: Sergio Andrés López Sánchez
 Fecha: 24/09/2024
 Materia: Sistemas Operativos
 Tema: named pipes bidireccionales
-Se creará un sistema cliente servidor, en el cual se va a poder realizar una comunicación bidireccional entre el cliente y el servidor. sentido SERVIDOR-CLIENTE
+Se creará un sistema cliente servidor, en el cual se va a poder realizar una comunicación bidireccional entre el cliente y el servidor, sentido SERVIDOR-CLIENTE.
 ***************************************/
 #include <stdio.h>
 #include <stdlib.h>
