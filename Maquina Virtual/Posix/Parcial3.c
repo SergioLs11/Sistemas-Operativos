@@ -1,9 +1,22 @@
 
+/**************************************************************************************
+Pontificia Universidad Javeriana
+Autor: Sergio Andrés López Sánchez
+Fecha: 29/10/2024
+Materia: Sistemas Operativos
+Tema: introducción a procesos con hilos
+La creación de hilos se da por la necesidad de dividir el proceso lo mayor posible, de esta manera, los hilos son las unidades de procesamiento mas pequeña. En el siguiente código se ralizará la separación mediante el comando "pthreads_t", creando el número de trabajos e hilos que ingrese el usuario.
+**************************************************************************************/
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <unistd.h>
+#include <pthread.h>
 
 pthread_mutex_t BLOQUEO;
 
-void *funcion(void ¨job){
+void *funcion(void *job){
   pthread_mutex_lock(&BLOQUEO);
 size_t IDh = *(size_t_ *)job;
 int cont = 5*IDh;
