@@ -11,10 +11,10 @@
 $Path = `pwd`;
 chomp($Path);
 
-$Nombre_Ejecutable = "MM_ejecutable";
-@Size_Matriz = ("200","300");
-@Num_Hilos = (1,2);
-$Repeticiones = 2;
+$Nombre_Ejecutable = "MM_ejecutable"; #Nombra el ejecutable a tratar
+@Size_Matriz = ("200","300");#Define el tamaño de las matrices
+@Num_Hilos = (1,2);#Define el número de hilos a usar
+$Repeticiones = 2;#Define la cantidad de veces que se va a repetir
 
 foreach $size (@Size_Matriz){
 	foreach $hilo (@Num_Hilos) {
