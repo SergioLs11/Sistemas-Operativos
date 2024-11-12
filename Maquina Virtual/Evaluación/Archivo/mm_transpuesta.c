@@ -63,7 +63,7 @@ void inicial_tiempo() {
 void final_tiempo() {
     gettimeofday(&stop, NULL); // Obtiene el tiempo final
     stop.tv_sec -= start.tv_sec; // Resta los segundos
-    printf("\n:-> %9.0f µs\n", (double) (stop.tv_sec * 1000000 + stop.tv_usec)); // Muestra el tiempo en microsegundos
+    printf("\n %9.0f \n", (double) (stop.tv_sec * 1000000 + stop.tv_usec)); // Muestra el tiempo en microsegundos
 }
 
 // Función que se ejecuta en cada hilo para realizar la multiplicación de matrices
